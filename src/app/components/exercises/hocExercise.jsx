@@ -1,7 +1,11 @@
 import React from "react";
 import CollapseWrapper from "../common/collapse";
+import Divider from "../../components/common/divider";
+import SimpleComponent from "./SimpleComponent";
+import withFunction from "./withFunction";
 
 const HocExercise = () => {
+    const ComponentWithHoc = withFunction(SimpleComponent);
     return (
         <CollapseWrapper title="Упражнение">
             <p className="mt-3">
@@ -76,6 +80,9 @@ const HocExercise = () => {
                 <code>SimpleComponent</code> обновится после перезагрузки
                 страницы
             </p>
+            <Divider />
+            <ComponentWithHoc />
+
         </CollapseWrapper>
     );
 };
