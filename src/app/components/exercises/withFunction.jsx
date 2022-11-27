@@ -3,10 +3,12 @@ import Card from "../common/Card";
 
 const withFunction = (Component) => (props) => {
     const isAuth = localStorage.getItem("auth") !== null;
+
     const onLogin = () => {
         localStorage.setItem("auth", "token");
         console.log("Login");
     };
+
     const onLogOut = () => {
         localStorage.removeItem("auth");
         console.log("Log Out");
