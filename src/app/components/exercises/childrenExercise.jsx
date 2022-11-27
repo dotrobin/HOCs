@@ -3,12 +3,10 @@ import CollapseWrapper from "../common/collapse";
 
 const ChildrenExercise = () => {
     const FormComponent = ({ children }) => {
-        let number = 0;
-        return React.Children.map(children, (child) => {
-            number++;
+        return React.Children.map(children, (child, index) => {
             return (
                 <>
-                    <p>{number}</p>
+                    <p>{index + 1}</p>
                     {child}
                 </>
             );
